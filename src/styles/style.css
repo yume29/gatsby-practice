@@ -145,7 +145,7 @@ svg {
 
 @media (min-width: 768px) {
 
-	.hero figure img {
+	.hero figure {
 		height: 750px;
 	}
 	.hero figure img {
