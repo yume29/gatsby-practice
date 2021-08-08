@@ -1,8 +1,9 @@
 import React from "react"
+import { graphql } from "gatsby"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 
 
-
-export default () => (
+export default ({data}) => (
 
 <div>
 <div>
@@ -23,7 +24,12 @@ export default () => (
   </header>
   <section className="hero">
     <figure>
-      <img src="/images/hero.jpg" alt="" />
+    <StaticImage
+      src="../images/hero.jpg"
+      alt=""
+      layout="fullWidth"
+      style={{ height :"100%"}}
+    />
     </figure>
     <div className="catch">
       <h1>There is no love sincerer than<br /> the love of food.</h1>
@@ -39,7 +45,12 @@ export default () => (
       <div className="details">
         <div className="detail">
           <figure>
-            <img src="/images/fruit.jpg" alt="" />
+          <StaticImage
+            src="../images/fruit.jpg"
+            alt=""
+            layout="constrained"
+            style={{ width :"320px"}}
+          />
           </figure>
           <h3>フルーツ</h3>
           <p>FRUIT</p>
@@ -47,7 +58,12 @@ export default () => (
         </div>
         <div className="detail">
           <figure>
-            <img src="/images/grain.jpg" alt="" />
+          <StaticImage
+            src="../images/grain.jpg"
+            alt=""
+            layout="constrained"
+            style={{ width :"320px"}}
+          />
           </figure>
           <h3>穀物</h3>
           <p>GRAIN</p>
@@ -55,7 +71,12 @@ export default () => (
         </div>
         <div className="detail">
           <figure>
-            <img src="/images/beverage.jpg" alt="" />
+          <StaticImage
+            src="../images/beverage.jpg"
+            alt=""
+            layout="constrained"
+            style={{ width :"320px"}}
+          />
           </figure>
           <h3>飲み物</h3>
           <p>BEVERAGE</p>
@@ -67,7 +88,12 @@ export default () => (
   <section className="photo">
     <h2 className="sr-only">Photo</h2>
     <figure>
-      <img src="/images/berry.jpg" alt="赤く熟したベリー" />
+    <StaticImage
+      src="../images/berry.jpg"
+      alt=""
+      layout="fullWidth"
+      style={{ height :"100%"}}
+    />
     </figure>
   </section>
   <footer className="footer">
@@ -103,3 +129,4 @@ export default () => (
 </div>
 </div>
 )
+
