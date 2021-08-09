@@ -153,6 +153,14 @@ export default () => (
         </li>
       </ul>
     </div>
+    <div className="back">
+      <StaticImage
+      src="../images/pattern.jpg"
+      alt=""
+      layout="fullWidth"
+      style={{ height :"100%"}}
+      />
+      </div>
   </footer>
 </div>
 </div>
