@@ -1,11 +1,14 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image" 
+import { FontAwesomeIcon  } from "@fortawesome/react-fontawesome"
+import { faTwitter, faFacebookSquare, faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { Link } from "gatsby"
 
 const Footer = () => (
   <footer className="footer">
     <div className="container">
       <div className="site">
-        <a href="base-index.html">
+        <Link to={`/`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="225.65"
@@ -19,24 +22,24 @@ const Footer = () => (
             />
           </svg>
           <p>おいしい食材と食事を探求するサイト</p>
-        </a>
+        </Link>
       </div>
       <ul className="sns">
         <li>
           <a href="https://twitter.com/">
-            <i className="fab fa-twitter" />
+            <FontAwesomeIcon icon={faTwitter} />
             <span className="sr-only">Twitter</span>
           </a>
         </li>
         <li>
           <a href="https://facebook.com/">
-            <i className="fab fa-facebook-square" />
+            <FontAwesomeIcon icon={faFacebookSquare} />
             <span className="sr-only">Facebook</span>
           </a>
         </li>
         <li>
           <a href="http://instagram.com/">
-            <i className="fab fa-instagram" />
+            <FontAwesomeIcon icon={faInstagram}/>
             <span className="sr-only">Instagram</span>
           </a>
         </li>
