@@ -3,7 +3,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 
-export default () => (
+const IndexPage = () => (
 <Layout>
   <section className="hero">
     <figure>
@@ -92,3 +92,4 @@ export default () => (
 </Layout>
 )
 
+export default IndexPage
