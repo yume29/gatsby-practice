@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[883],{9616:function(e,t,a){a.r(t);var l=a(7294),n=a(967),r=a(3751);t.default=function(e){var t=e.location;return l.createElement(n.Z,null,l.createElement(r.Z,{pagetitle:"ページが見つかりません",pagepath:t.pathname}),l.createElement("h1",{style:{padding:"20vh 0",textAlign:"center"}},"お探しのページは見つかりませんでした。"))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-8947d12afa2475e87f28.js.map
