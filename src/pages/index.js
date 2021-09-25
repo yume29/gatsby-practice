@@ -1,10 +1,10 @@
 import React from "react"
-// import { graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { Link, graphql } from "gatsby"
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
 <Layout>
   <Seo />
   <section className="hero">
@@ -91,7 +91,46 @@ const IndexPage = () => (
     />
     </figure>
   </section>
+  <section>
+      <div className="container">
+        <h2 className="sr-only">RECENT POSTS</h2>
+        <div className="posts">
+        {data.allContentfulBlogPost.edges.map(({node}) => (
+          <article className="post" key={node.id}>
+            <Link to={`/blog/post/${node.slug}`}>
+              <figure>
+                <GatsbyImage image={node.eyecatch.gatsbyImageData} alt={node.eyecatch.description} style={{ height: "100%" , width: "573px"}}/>
+              </figure>
+              <h3>{node.title}</h3>
+            </Link>
+          </article>
+          ))}
+        </div>
+      </div>
+    </section>
 </Layout>
 )
+
+export const query = graphql`
+query{
+  allContentfulBlogPost(
+    sort: {order: DESC, fields: publishDate}
+    limit: 4
+    skip: 0
+  ) {
+    edges {
+      node {
+        title
+        id
+        slug
+        eyecatch {
+          gatsbyImageData(layout: CONSTRAINED, width: 500)
+          description
+        }
+      }
+    }
+  }
+}
+`
 
 export default IndexPage
