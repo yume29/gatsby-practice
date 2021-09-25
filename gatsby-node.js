@@ -42,4 +42,22 @@ exports.createPages = async({ graphql, actions, reporter }) => {
       },
     })
   })
+
+  const blogPostPerPage = 6;
+  const blogPosts = blogresult.data.allContentfulBlogPost.edges.length
+  const blogPages = Math.ceil(blogPosts / blogPostPerPage )
+
+  Array.from({length: blogPages}).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/blog/` : `/blog/${i + 1}/`,
+      component: path.resolve("./src/templates/blog-template.js"),
+      context: {
+        skip: blogPostPerPage * i,
+        limit: blogPostPerPage,
+        currentPage: i + 1, //現在のページ番号
+        isFirst: i + 1 === 1, //最初のページ
+        isLast: i + 1 === blogPages, //最後のページ 
+      },
+    })
+  })
 }
