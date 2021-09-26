@@ -124,7 +124,7 @@ query{
         id
         slug
         eyecatch {
-          gatsbyImageData(layout: CONSTRAINED, width: 500)
+          gatsbyImageData(width: 573, layout: CONSTRAINED)
           description
         }
       }

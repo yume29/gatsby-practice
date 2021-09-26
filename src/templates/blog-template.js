@@ -21,7 +21,11 @@ const BlogPage = ({ data, location, pageContext }) => (
           <article className="post" key={node.id}>
             <Link to={`/blog/post/${node.slug}`}>
               <figure>
-                <GatsbyImage image={node.eyecatch.gatsbyImageData} alt={node.eyecatch.description} style={{ height: "100%" }}/>
+              <GatsbyImage
+                image={node.eyecatch.gatsbyImageData}
+                alt={node.eyecatch.description}
+                style={{ height: "100%" , width: "500px"}}
+              />
               </figure>
               <h3>{node.title}</h3>
             </Link>
@@ -71,7 +75,7 @@ query($skip: Int!, $limit: Int!){
         id
         slug
         eyecatch {
-          gatsbyImageData(layout: CONSTRAINED, width: 500)
+          gatsbyImageData(width: 500, layout: CONSTRAINED)
           description
         }
       }
