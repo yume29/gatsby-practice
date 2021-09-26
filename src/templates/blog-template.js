@@ -24,7 +24,7 @@ const BlogPage = ({ data, location, pageContext }) => (
               <GatsbyImage
                 image={node.eyecatch.gatsbyImageData}
                 alt={node.eyecatch.description}
-                style={{ height: "200px" , width: "500px"}}
+                style={{ height: "100%" }}
               />
               </figure>
               <h3>{node.title}</h3>

@@ -99,7 +99,7 @@ const IndexPage = ({ data }) => (
           <article className="post" key={node.id}>
             <Link to={`/blog/post/${node.slug}`}>
               <figure>
-                <GatsbyImage image={node.eyecatch.gatsbyImageData} alt={node.eyecatch.description} style={{ height: "200px" , width: "573px"}}/>
+                <GatsbyImage image={node.eyecatch.gatsbyImageData} alt={node.eyecatch.description} style={{ height: "100％" }}/>
               </figure>
               <h3>{node.title}</h3>
             </Link>
